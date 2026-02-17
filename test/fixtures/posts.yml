@@ -1,11 +1,10 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# test/fixtures/posts.yml
 one:
-  title: My first post
-  body: This is the content of my first post
-  member: one  # This associates with the member fixture named "one"
+  title: "My First Post Title That Is Long Enough"
+  body: "This is the body of my first post which needs to be sufficiently long to meet the minimum length requirement of 15 characters."
+  member: one
 
 two:
-  title: My second post
-  body: This is the content of my second post
-  member: two  # This associates with the member fixture named "two"
+  title: "Another Post Title That Meets Length Requirements"
+  body: "Here is another post body that is definitely long enough to pass validation because it has many words and characters."
+  member: two

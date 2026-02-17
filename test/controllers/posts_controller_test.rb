@@ -1,11 +1,12 @@
+# test/controllers/posts_controller_test.rb
 require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
-  include Devise::Test::IntegrationHelpers  # Add this line
+  include Devise::Test::IntegrationHelpers
 
   setup do
-    @member = members(:one)  # Get a member from fixtures
-    sign_in @member  # Devise helper method
+    @member = members(:one)
+    sign_in @member
   end
 
   test "should get index" do
@@ -22,8 +23,8 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_difference("Post.count", 1) do
       post posts_url, params: {
         post: {
-          title: "Test Post",
-          body: "This is a test post body"
+          title: "My Amazing Test Post Title Here",  # 30+ characters
+          body: "This is a sufficiently long body for my test post that meets the minimum length requirement of 15 characters and provides enough content to be valid."  # Well over 15 characters
         }
       }
     end
