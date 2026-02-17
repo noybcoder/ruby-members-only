@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  body: MyText
+  title: My first post
+  body: This is the content of my first post
+  member: one  # This associates with the member fixture named "one"
 
 two:
-  title: MyString
-  body: MyText
+  title: My second post
+  body: This is the content of my second post
+  member: two  # This associates with the member fixture named "two"
