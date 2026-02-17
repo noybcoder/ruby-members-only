@@ -1,0 +1,22 @@
+<% if member_signed_in? %>
+    <div><%= current_member.email %>, are you ready to make a new post?</div>
+    <%= button_to "Sign out", destroy_member_session_path, method: :delete %>
+<% else %>
+    <%= button_to "Sign in", new_member_session_path %>
+<% end %>
+
+<h1>Create New Post</h1>
+
+<%= form_with model: @post do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div>
+        <%= form.label :body %>
+        <%= form.textarea :body %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
