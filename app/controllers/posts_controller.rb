@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_member!, only: [:new, :create]
+  before_action :authenticate_member!, only: [ :new, :create ]
 
   def new
     @post = current_member.posts.build
@@ -22,6 +22,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.expect(post: [:title, :body, :member_id])
+    params.expect(post: [ :title, :body, :member_id ])
   end
 end
