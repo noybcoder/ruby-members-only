@@ -3,9 +3,7 @@
 one:
   email: john@example.com
   encrypted_password: <%= Devise::Encryptor.digest(Member, 'password123') %>
-  name: John Doe
 
 two:
   email: jane@example.com
   encrypted_password: <%= Devise::Encryptor.digest(Member, 'password123') %>
-  name: Jane Smith
